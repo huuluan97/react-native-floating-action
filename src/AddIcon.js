@@ -2,17 +2,14 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import { View, StyleSheet } from "react-native";
 
-class AddIcon extends PureComponent {
-  render() {
-    const { width, height, backgroundColor } = this.props;
-
-    return (
-      <View style={styles.container}>
-        <View style={[styles.vertical, { height, backgroundColor }]} />
-        <View style={[styles.horizontal, { width, backgroundColor }]} />
-      </View>
-    );
-  }
+function AddIcon(props) {
+  const { width, height, backgroundColor } = props;
+  return (
+    <View style={styles.container}>
+      <View style={[styles.vertical, { height, backgroundColor }]} />
+      <View style={[styles.horizontal, { width, backgroundColor }]} />
+    </View>
+  )
 }
 
 AddIcon.propTypes = {
